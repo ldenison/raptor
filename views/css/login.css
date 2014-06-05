@@ -1,0 +1,28 @@
+body {
+	background-color: #330066;
+	text-align: center;
+	color: white;
+}
+h1 {
+	font-size: 60pt;
+}
+.title {
+	margin-top: 150px;
+}
+.login-form {
+	text-align: center;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.btn-login {
+	width: 600px;
+	color: white;
+	border: thin solid white;
+	background-color: #330066;
+	border-radius: 0 0 5px 5px;
+}
+.btn-login:hover {
+	color: #330066;
+	background-color: white;
+}
