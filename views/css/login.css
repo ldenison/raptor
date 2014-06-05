@@ -4,25 +4,69 @@ body {
 	color: white;
 }
 h1 {
-	font-size: 60pt;
+	font-family: Didot, "Didot LT STD", "Bodoni MT", "Book Antiqua", Garamond, "Times New Roman", serif;
+	font-size: 65pt;
 }
 .title {
 	margin-top: 150px;
 }
+.title>p {
+	font-family: Didot, "Didot LT STD", "Bodoni MT", "Book Antiqua", Garamond, "Times New Roman", serif;
+	font-size: 15pt;
+}
 .login-form {
 	text-align: center;
-	width: 600px;
+	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 25px;
 }
 .btn-login {
-	width: 600px;
+	margin-top: -1px;
+	width: 400px;
 	color: white;
-	border: thin solid white;
+	border-left: thin solid white;
+	border-right: thin solid white;
+	border-bottom: thin solid white;
 	background-color: #330066;
-	border-radius: 0 0 5px 5px;
 }
-.btn-login:hover {
+.btn-login:hover,btn-login:active {
 	color: #330066;
 	background-color: white;
+}
+.control-bottom {
+	border-radius: 0 0 5px 5px;
+}
+.control-top {
+	border-radius: 5px 5px 0 0;
+}
+.control-middle {
+	border-radius: 0 0 0 0;
+}
+.form-control,.btn-login {
+	text-align: center;
+	height: 50px;
+	font-size: 20pt;
+}
+.nav-menu {
+	background-color: black;
+	color: #999;
+}
+.nav-menu>li {
+	color: #999;
+}
+li>a:link,li>a:visited,li>a:active {
+	color: #999;
+	text-decoration: none;
+}
+li>a:hover {
+	color: white;
+}
+.nav-menu>ul {
+	text-align: left;
+}
+li {
+	list-style-type: none;
+	display: inline;
+	padding-right: 15px;
 }
