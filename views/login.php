@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="/raptor/views/css/login.css">
 <script type='text/javascript' src='/common/javascript/jquery-1.9.1.min.js'></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("#username").focus();
+});
+</script>
 </head>
 <body>
 	<div class="nav-menu" role="navigation">
@@ -25,7 +30,7 @@
 	
 	<div class="login-form">
 		<form name="login" action="/raptor/controllers/usersController?action=login" method="post">
-			<input type="text" class="form-control control-top" name="username" autocomplete="off" placeholder="Username">
+			<input type="text" class="form-control control-top" id="username" name="username" autocomplete="off" placeholder="Username">
 			<input type="password" class="form-control control-middle" name="password" autocomplete="off" placeholder="Password"> 
 			<input type="submit" class="btn btn-login control-bottom" value="Login">
 		</form>

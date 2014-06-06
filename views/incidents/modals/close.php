@@ -9,10 +9,7 @@
 				<h4 class="modal-title">Close Incident</h4>
 			</div>
 			<div class="modal-body">
-				<h3>Close Incident 4576</h3>
-				<p>I can't log in to my emich account because I there is something really long
-				in this ticket for some reason but who cares found a dog and he is cool.
-				</p>
+				<h3>Close Incident</h3>
 				<form role='form' name='close_incident'
 					id="close_incident"
 					action='/raptor/controllers/incidentsController?action=close'

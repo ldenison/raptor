@@ -21,6 +21,7 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 <script type='text/javascript' src='/common/javascript/jquery-1.9.1.min.js'></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="/raptor/views/js/sidebar.js"></script>
+<script src="/raptor/views/js/stars.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse" role="navigation">

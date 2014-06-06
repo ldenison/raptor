@@ -16,25 +16,26 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 						<i class="glyphicon glyphicon-cog"></i>
 					</span>
 					<ul class="dropdown-menu dropdown-menu-left">
-						<li><a href="#"><i class="glyphicon glyphicon-ok"> </i> Close</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-pencil"> </i> Edit</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-share-alt"> </i> Assign</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-envelope"> </i> Email</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-comment"> </i> Comment</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-paperclip"> </i> Attach</a></li>
+						<li><a href="#close-incident" data-toggle="modal"><i class="glyphicon glyphicon-remove"></i> Close</a></li>
+						<li><a href="#assign-incident" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i> Assign</a></li>
+						<li><a href="#email-incident" data-toggle="modal"><i class="glyphicon glyphicon-envelope"></i> Email</a></li>
+						<li><a href="#comment-incident" data-toggle="modal"><i class="glyphicon glyphicon-comment"></i> Comment</a></li>
+						<li><a href="#attach-incident" data-toggle="modal"><i class="glyphicon glyphicon-paperclip"></i> Attach</a></li>
+						<li><a href="#due-date-incident" data-toggle="modal"><i class="glyphicon glyphicon-calendar"></i> Change Due Date</a></li>
 					</ul>
 				</div>
 			</td>
 			<td>
-				<i style="color: #ffd76e" class="glyphicon glyphicon-star"></i>
+				<i class="star glyphicon glyphicon-star"></i>
 			</td>
 			<td>
-				<a href="#">4576</a>
+				<a href="/raptor/views/incidents/view-incident">4576</a>
 			</td>
 			<td>
 				<a href="#">bpeters</a>
+			</td>
 			<td>
-				<a href="#">I can't log in to my emich account because I there is something really long in this ticket for some reason but who cares found a dog and he...</a>
+				<a href="/raptor/views/incidents/view-incident">I can't log in to my emich account because I there is something really long in this ticket for some reason but who cares found a dog and he...</a>
 			</td>
 			<td>
 				<a href="#">ldenison</a>
@@ -59,25 +60,25 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 						<i class="glyphicon glyphicon-cog"></i>
 					</span>
 					<ul class="dropdown-menu dropdown-menu-left">
-						<li><a href="#close-incident" data-toggle="modal"><i class="glyphicon glyphicon-ok"> </i> Close</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-pencil"> </i> Edit</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-share-alt"> </i> Assign</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-envelope"> </i> Email</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-comment"> </i> Comment</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-paperclip"> </i> Attach</a></li>
+						<li><a href="#close-incident" data-toggle="modal"><i class="glyphicon glyphicon-remove"></i> Close</a></li>
+						<li><a href="#assign-incident" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i> Assign</a></li>
+						<li><a href="#email-incident" data-toggle="modal"><i class="glyphicon glyphicon-envelope"></i> Email</a></li>
+						<li><a href="#comment-incident" data-toggle="modal"><i class="glyphicon glyphicon-comment"></i> Comment</a></li>
+						<li><a href="#attach-incident" data-toggle="modal"><i class="glyphicon glyphicon-paperclip"></i> Attach</a></li>
+						<li><a href="#due-date-incident" data-toggle="modal"><i class="glyphicon glyphicon-calendar"></i> Change Due Date</a></li>
 					</ul>
 				</div>
 			</td>
 			<td>
-				<i class="glyphicon glyphicon-star-empty"></i>
+				<i class="star glyphicon glyphicon-star-empty"></i>
 			</td>
 			<td>
-				<a href="#">4579</a>
+				<a href="/raptor/views/incidents/view-incident">4579</a>
 			</td>
 			<td>
 				<a href="#">atanner1</a>
 			<td>
-				<a href="#">I can't log in to my emich account because I there is...</a>
+				<a href="/raptor/views/incidents/view-incident">I can't log in to my emich account because I there is...</a>
 			</td>
 			<td>
 				<a href="#">ldenison</a>
@@ -98,4 +99,9 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 	</table>
 </div>
 
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/assign.php");?>
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/attach.php");?>
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/close.php");?>
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/comment.php");?>
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/due-date.php");?>
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/email.php");?>
