@@ -2,14 +2,17 @@ function collapseSidebar() {
 	var sidebar = $(".sidebar-container");
 	sidebar.hide();
 	$(".sidebar-collapsed").show();
-	$(".main-content-container").css("left","65px");
-	$(".main-content-container").width("auto");
+	$("#main-content").removeClass("col-xs-10");
+	$("#main-content").removeClass("col-xs-offset-2");
+	$("#main-content").addClass("col-xs-12");
 }
 function expandSidebar() {
 	var sidebar = $(".sidebar-collapsed")
 		sidebar.hide();
 		$(".sidebar-container").show();
-		$(".main-content-container").css("left","270px");
+		$("#main-content").removeClass("col-xs-12");
+		$("#main-content").addClass("col-xs-offset-2");
+		$("#main-content").addClass("col-xs-10");
 }
 
 $(document).ready(function() {
@@ -19,10 +22,8 @@ $(document).ready(function() {
 	$(".sidebar-collapsed").click(function() {
 		expandSidebar();
 	});
-	$(".sidebar-container").click(function() {
+	$(".sidebar-footer").click(function() {
 		collapseSidebar();
-	}).children().click(function(e) {
-		return false;
 	});
 	
 	//Hot keys (left bracket or right - []) to expand / collapse sidebar

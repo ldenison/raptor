@@ -4,7 +4,7 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 
 
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
-<div class="main-content-container">
+<div id="main-content" class="col-xs-10 col-xs-offset-2">
 	<h3>My Incidents</h3>
 	<hr>
 	<table class="table table-condensed">
@@ -12,7 +12,7 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 		<tr>
 			<td>
 				<div class="dropdown">
-					<span class="dropdown-toggle btn btn-xs" data-toggle="dropdown">
+					<span style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="glyphicon glyphicon-cog"></i>
 					</span>
 					<ul class="dropdown-menu dropdown-menu-left">
@@ -55,11 +55,11 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 		<tr>
 			<td>
 				<div class="dropdown">
-					<span class="dropdown-toggle btn btn-xs" data-toggle="dropdown">
+					<span style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="glyphicon glyphicon-cog"></i>
 					</span>
 					<ul class="dropdown-menu dropdown-menu-left">
-						<li><a href="#"><i class="glyphicon glyphicon-ok"> </i> Close</a></li>
+						<li><a href="#close-incident" data-toggle="modal"><i class="glyphicon glyphicon-ok"> </i> Close</a></li>
 						<li><a href="#"><i class="glyphicon glyphicon-pencil"> </i> Edit</a></li>
 						<li><a href="#"><i class="glyphicon glyphicon-share-alt"> </i> Assign</a></li>
 						<li><a href="#"><i class="glyphicon glyphicon-envelope"> </i> Email</a></li>
@@ -77,7 +77,7 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 			<td>
 				<a href="#">atanner1</a>
 			<td>
-				<a href="#">I can't log in to my emich account because I there is ...</a>
+				<a href="#">I can't log in to my emich account because I there is...</a>
 			</td>
 			<td>
 				<a href="#">ldenison</a>
@@ -97,3 +97,5 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 		</tr>
 	</table>
 </div>
+
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/close.php");?>

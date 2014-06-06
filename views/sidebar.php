@@ -1,4 +1,4 @@
-<div class="sidebar-container">
+<div class="sidebar-container col-sm-2">
 	<div class="sidebar-body">
 		<p class="sidebar-header">
 			<i class="glyphicon glyphicon-fire"> </i> Create Incident
@@ -24,7 +24,7 @@
 		</p>
 		<div class="submenu expand">
 			<ul>
-				<li><a href="#">Search</a></li>
+				<li><a href="/raptor/views/clients/search">Search</a></li>
 				<li><a href="#">COT</a></li>
 				<li><a href="#">IT Staff</a></li>
 				<li><a href="#">Pray Harrold</a></li>
@@ -34,6 +34,9 @@
 		<hr>
 	</div>
 	<div class="sidebar-footer">
+		<p class="sidebar-header">
+			<i class="glyphicon glyphicon-chevron-left"></i><i class="glyphicon glyphicon-chevron-left"> </i>
+		</p>
 	</div>
 </div>
 	
@@ -50,4 +53,9 @@
 		<i class="glyphicon glyphicon-user"> </i>
 	</div>
 	<hr>
+	<div class="sidebar-footer">
+		<p class="sidebar-header">
+			<i class="glyphicon glyphicon-chevron-right"></i>
+		</p>
+	</div>
 </div>
