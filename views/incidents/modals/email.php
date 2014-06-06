@@ -6,7 +6,7 @@
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal"
 					aria-hidden="true">&times;</button>
-				<h4 class="modal-title">email</h4>
+				<h4 class="modal-title">Email</h4>
 			</div>
 			<div class="modal-body">
 				<form role='form' name='email_incident'
