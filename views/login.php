@@ -19,7 +19,7 @@ $(document).ready(function() {
 		<ul>
 			<li><a href="docs">Docs</a></li>
 			<li><a href="support">Support</a></li>
-			<li><a href="bugs">Report a Bug</a></li>
+			<li><a href="https://github.com/ldenison/raptor/issues">Report a Bug</a></li>
 			<li>v0.1.1</li>
 		</ul>
 	</div>
