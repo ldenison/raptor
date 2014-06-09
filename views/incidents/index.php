@@ -15,14 +15,18 @@ $incidents = $ic->index();
 			<tr class="active"><td></td><td></td><th>#</th><th>Client</th><th>Summary</th><th>Assignee</th><th>P</th><th>Status</th><th>Created</th><th>Due</th></tr>
 		</thead>
 		<tbody>
-		<?php if(!empty($incidents)) {?>
+		<?php if(!empty($incidents)) { ?>
 			<?php foreach($incidents as $i){
 				$client = new Client($i->get("client_id"));
 				$client = $client->get("email");
+				$priority = new Priority($i->get("priority_id"));
+				$p_priority = "<i class='glyphicon ";
+				$p_priority .= $priority->get("icon") . "' style='color:#";
+				$p_priority .= $priority->get("color")."'></i>";
+				
+				$status = new Status($i->get("status_id"));
+				$status = $status->get("status");
 				?>
-		
-			<?php }?>
-		<?php }?>
 			<tr>
 				<td>
 					<div class="dropdown">
@@ -43,73 +47,35 @@ $incidents = $ic->index();
 					<i class="star glyphicon glyphicon-star"></i>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/view-incident">4576</a>
+					<a href="/raptor/views/incidents/view-incident"><?php echo $i->get("id");?></a>
 				</td>
 				<td>
-					<a href="#">bpeters</a>
+					<a href="#"><?php echo $client;?></a>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/view-incident">I can't log in to my emich account because I there is something really long in this ticket for some reason but who cares found a dog and he...</a>
+					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("description");?></a>
 				</td>
 				<td>
-					<a href="#">ldenison</a>
+					<a href="#"><?php echo $i->get("assigned_to");?></a>
 				</td>
 				<td>
-					Urgent
+					<?php echo $p_priority;?>
 				</td>
 				<td>
-					<i>Unresolved</i>
+					<i><?php echo $status;?></i>
 				</td>
 				<td>
-					06/06/2014
+					<?php echo $i->printDate($i->get("created"));?>
 				</td>
 				<td>
-					06/09/2014
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div class="dropdown">
-						<span style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="glyphicon glyphicon-cog"></i>
-						</span>
-						<ul class="dropdown-menu dropdown-menu-left">
-							<li><a href="#close-incident" data-toggle="modal"><i class="glyphicon glyphicon-remove"></i> Close</a></li>
-							<li><a href="#assign-incident" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i> Assign</a></li>
-							<li><a href="#email-incident" data-toggle="modal"><i class="glyphicon glyphicon-envelope"></i> Email</a></li>
-							<li><a href="#comment-incident" data-toggle="modal"><i class="glyphicon glyphicon-comment"></i> Comment</a></li>
-							<li><a href="#attach-incident" data-toggle="modal"><i class="glyphicon glyphicon-paperclip"></i> Attach</a></li>
-							<li><a href="#due-date-incident" data-toggle="modal"><i class="glyphicon glyphicon-calendar"></i> Change Due Date</a></li>
-						</ul>
-					</div>
-				</td>
-				<td>
-					<i class="star glyphicon glyphicon-star-empty"></i>
-				</td>
-				<td>
-					<a href="/raptor/views/incidents/view-incident">4579</a>
-				</td>
-				<td>
-					<a href="#">atanner1</a>
-				<td>
-					<a href="/raptor/views/incidents/view-incident">I can't log in to my emich account because I there is...</a>
-				</td>
-				<td>
-					<a href="#">ldenison</a>
-				</td>
-				<td>
-					Medium
-				</td>
-				<td>
-					<i>Unresolved</i>
-				</td>
-				<td>
-					06/05/2014
-				</td>
-				<td>
-					06/10/2014
+					<?php echo $i->printDate($i->get("due"));?>
 				</td>
 			</tr>
+			<?php }?>
+			
+			<?php } else {?>
+			There are no Incidents
+			<?php }?>
 		</tbody>
 	</table>
 </div>
