@@ -37,7 +37,7 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 		<div class='navbar-right pull-right'>
 			<ul class='nav navbar-nav'>
 				<li><a href="/raptor/views/users/profile"><i class="glyphicon glyphicon-user"></i></a></li>
-				<li><a href="/raptor/views/users/profile"><i class="glyphicon glyphicon-cog"></i></a></li>
+				<li><a href="/raptor/views/settings"><i class="glyphicon glyphicon-cog"></i></a></li>
 				<li><a href='/raptor/views/logout'>Log out</a></li>
 			</ul>
 		</div>
