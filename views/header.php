@@ -1,17 +1,7 @@
 <?php if(!isset($_SESSION)){
 	session_start();
 }
-
-function __autoload($class_name) {
-	$class_name = lcfirst($class_name);
-	if(file_exists(getenv("DOCUMENT_ROOT")."/raptor/models/$class_name.php")) {
-		require_once(getenv("DOCUMENT_ROOT")."/raptor/models/$class_name.php");
-	}
-	elseif(file_exists(getenv("DOCUMENT_ROOT")."/raptor/controllers/$class_name.php")) {
-		require_once(getenv("DOCUMENT_ROOT")."/raptor/controllers/$class_name.php");
-	}
-	
-}
+require_once(getenv("DOCUMENT_ROOT")."/raptor/app/autoload.php");
 /*
 if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['username'])) {
 	header("Location: /raptor/views/login");
