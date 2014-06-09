@@ -1,3 +1,11 @@
 .star {
 	cursor: pointer;
 }
+.navbar {
+	background-color: #330066;
+}
+th:hover {
+	cursor: pointer;
+	color: #707070;
+	background-color: white;
+}
