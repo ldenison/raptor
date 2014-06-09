@@ -1,6 +1,6 @@
 <?php 
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
-require_once(getenv("DOCUMENT_ROOT")."/raptor/controllers/prioritiesController.php");
+
 $pc = new PrioritiesController();
 $priorities = $pc->index();
 ?>

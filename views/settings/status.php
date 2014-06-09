@@ -1,6 +1,6 @@
 <?php 
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
-require_once(getenv("DOCUMENT_ROOT")."/raptor/controllers/statusesController.php");
+
 $sc = new StatusesController();
 $statuses = $sc->index();
 ?>

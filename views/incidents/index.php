@@ -1,6 +1,5 @@
 <?php 
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
-require_once(getenv("DOCUMENT_ROOT")."/raptor/controllers/incidentsController.php");
 
 $ic = new IncidentsController();
 $incidents = $ic->index();
@@ -9,7 +8,6 @@ $incidents = $ic->index();
 
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
 <div id="main-content" class="col-xs-10 col-xs-offset-2">
-<?php var_dump($incidents);?>
 	<h3>My Incidents</h3>
 	<hr>
 	<table class="table table-condensed" id="incidents">
@@ -17,6 +15,14 @@ $incidents = $ic->index();
 			<tr class="active"><td></td><td></td><th>#</th><th>Client</th><th>Summary</th><th>Assignee</th><th>P</th><th>Status</th><th>Created</th><th>Due</th></tr>
 		</thead>
 		<tbody>
+		<?php if(!empty($incidents)) {?>
+			<?php foreach($incidents as $i){
+				$client = new Client($i->get("client_id"));
+				$client = $client->get("email");
+				?>
+		
+			<?php }?>
+		<?php }?>
 			<tr>
 				<td>
 					<div class="dropdown">
