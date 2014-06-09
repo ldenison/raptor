@@ -1,10 +1,15 @@
 <?php 
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
+require_once(getenv("DOCUMENT_ROOT")."/raptor/controllers/incidentsController.php");
+
+$ic = new IncidentsController();
+$incidents = $ic->index();
 ?>
 
 
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
 <div id="main-content" class="col-xs-10 col-xs-offset-2">
+<?php var_dump($incidents);?>
 	<h3>My Incidents</h3>
 	<hr>
 	<table class="table table-condensed" id="incidents">
