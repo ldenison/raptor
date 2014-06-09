@@ -10,6 +10,5 @@ class UsersController extends Controller {
 	public static $databaseUser = "ldenison";
 	public static $modelPath = "/raptor/models/user.php";
 	public static $application_name = "raptor";
-	
 }
 ?>
