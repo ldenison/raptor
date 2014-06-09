@@ -7,7 +7,9 @@ if(isset($_GET['action'])) {
 	
 	switch($action) {
 		case "create": {
-			$ic->create($_POST);
+			$incident = new Incident(0,$_POST);
+			$id = $incident->get("id");
+			header("Location:/raptor/views/incidents/view-incident?id=$id");
 		}
 	}
 }
