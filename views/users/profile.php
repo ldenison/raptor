@@ -1,6 +1,5 @@
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php"); ?>
-<div class="container">
-<h1>User Profile</h1>
+<h3>User Profile</h3>
 <hr>
 <form name="user-profile" class="form-horizontal" action="/raptor/controllers/usersController?action=edit" method="post">
 	<div class="form-group">
@@ -35,7 +34,7 @@
 	</div>
 	<hr>
 	
-	<h1>Preferences</h1>
+	<h3>Preferences</h3>
 	<div class="form-group">
 		<label class="col-sm-2 control-label" for="first_name">Sidebar</label>
 		<div class="col-sm-4">
@@ -87,4 +86,3 @@
 		</div>
 	</div>
 </form>
-</div>

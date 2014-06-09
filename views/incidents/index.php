@@ -3,18 +3,7 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 
 $ic = new IncidentsController();
 $incidents = $ic->index();
-//placeholder for sidebar collapse preference
-$hide=true;
-if($hide) {
-	$content_width = "col-xs-12";
-}
-else {
-	$content_width = "col-xs-10 col-xs-offset-2";
-}
 ?>
-
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
-<div id="main-content" class="<?php echo $content_width;?>">
 	<h3>My Incidents</h3>
 	<hr>
 	<table class="table table-condensed" id="incidents">
@@ -86,7 +75,6 @@ else {
 			<?php }?>
 		</tbody>
 	</table>
-</div>
 
 <script src="/common/jquery-tablesorter/jquery.tablesorter.min.js"></script>
 <script>

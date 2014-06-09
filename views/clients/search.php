@@ -11,7 +11,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<div id="main-content" class="col-xs-10 col-xs-offset-2">
+
 	<h3>Search Clients</h3>
 	<hr>
 	<div class="row">
@@ -36,4 +36,4 @@ $(document).ready(function() {
 		</div>
 	</form>
 	</div>
-</div>
+

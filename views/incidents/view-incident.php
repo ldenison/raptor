@@ -4,7 +4,6 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 
 
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
-<div id="main-content" class="col-xs-10 col-xs-offset-2">
 
 <table class="table table-striped">
 	<tr>

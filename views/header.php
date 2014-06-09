@@ -55,6 +55,19 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 	</nav>
 	<div class='container'>
 		<div class='row main-content'>
+		<?php 
+			//placeholder for sidebar collapse preference
+			$hide=true;
+			if($hide) {
+				$content_width = "col-xs-12";
+			}
+			else {
+				$content_width = "col-xs-10 col-xs-offset-2";
+			}
+		?>
+
+		<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
+		<div id="main-content" class="<?php echo $content_width;?>">
 			<?php if(isset($_SESSION['raptor']['message'])){?>
 
 			<div class="alert alert-success">

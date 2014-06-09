@@ -9,7 +9,6 @@ $(document).ready(function() {
 	$("#client").focus();
 });
 </script>
-<div id="main-content" class="col-xs-10 col-xs-offset-2">
 	<h3>Create Incident</h3>
 	<hr>
 	<form class="form-horizontal" name="create_incident" action="/raptor/controllers/incidentsController?action=create" method="post">
