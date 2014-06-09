@@ -2,8 +2,6 @@
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 ?>
 
-
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
 <script>
 $(document).ready(function() {
 	$("#client").focus();

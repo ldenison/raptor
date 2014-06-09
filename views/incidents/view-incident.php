@@ -2,9 +2,6 @@
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 ?>
 
-
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
-
 <table class="table table-striped">
 	<tr>
 		<td colspan="8">

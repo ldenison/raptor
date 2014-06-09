@@ -1,6 +1,5 @@
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");?>
 
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
 <link rel="stylesheet" href="/common/typeahead/typeahead.js-bootstrap.css">
 <script src="/common/typeahead/typeahead.min.js"></script>
 <script>
