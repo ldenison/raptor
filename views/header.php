@@ -39,11 +39,12 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/raptor/views/incidents">Raptor</a>
 		</div>
-		<div class='navbar-left'>
-			<ul class='nav navbar-nav'>
-				<li><a href='/raptor/views/request'>Link</a></li>
-			</ul>
-		</div>
+		<form class="navbar-form navbar-left form-inline" role="search">
+			<div class="form-group">
+				<input class="form-control" type="text" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-raptor"><i class="glyphicon glyphicon-search"></i></button>
+		</form>
 
 		<div class='navbar-right pull-right'>
 			<ul class='nav navbar-nav'>
