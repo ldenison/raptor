@@ -1,8 +1,20 @@
-<div class="sidebar-container col-sm-2">
+<?php $hide = true;
+	if($hide) {
+		$full_class="hidden";
+		$collapse_class="";
+	}
+	else {
+		$full_class="";
+		$collapse_class="hidden";
+	}
+?>
+<div class="sidebar-container <?php echo $full_class;?> col-sm-2">
 	<div class="sidebar-body">
-		<p class="sidebar-header">
-			<i class="glyphicon glyphicon-fire"> </i> Create Incident
-		</p>
+		<a class="no-decoration" href="/raptor/views/incidents/create">
+			<p class="sidebar-header">
+				<i class="glyphicon glyphicon-fire"> </i> Create Incident
+			</p>
+		</a>
 		<hr>
 		<p class="sidebar-header">
 			<i class="glyphicon glyphicon-list"> </i> Incident Filters
@@ -40,10 +52,12 @@
 	</div>
 </div>
 	
-<div class="sidebar-collapsed">
-	<div class="sidebar-header">
-		<i class="glyphicon glyphicon-fire"></i>
-	</div>
+<div class="sidebar-collapsed <?php echo $collapse_class;?>">
+	<a class="no-decoration" href="/raptor/views/incidents/create">
+		<div class="sidebar-header">
+			<i class="glyphicon glyphicon-fire"></i>
+		</div>
+	</a>
 	<hr>
 	<div class="sidebar-header">
 		<i class="glyphicon glyphicon-list"> </i>

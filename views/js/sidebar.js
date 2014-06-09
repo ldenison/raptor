@@ -1,6 +1,7 @@
 function collapseSidebar() {
 	var sidebar = $(".sidebar-container");
 	sidebar.hide();
+	$(".sidebar-collapsed").removeClass("hidden");
 	$(".sidebar-collapsed").show();
 	$("#main-content").removeClass("col-xs-10");
 	$("#main-content").removeClass("col-xs-offset-2");
@@ -9,6 +10,7 @@ function collapseSidebar() {
 function expandSidebar() {
 	var sidebar = $(".sidebar-collapsed")
 		sidebar.hide();
+		$(".sidebar-container").removeClass("hidden");
 		$(".sidebar-container").show();
 		$("#main-content").removeClass("col-xs-12");
 		$("#main-content").addClass("col-xs-offset-2");
