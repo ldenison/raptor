@@ -21,11 +21,10 @@ if(isset($_GET['action'])) {
 			$data['priority_id'] = $_POST['priority_id'];
 			$data['status_id'] = 1;
 			$data['created'] = DB::oracleTime("now");
-			//$data['due'] = DB::oracleTime("now + 3 days");
+			$data['due'] = DB::oracleTime("now + 3 days");
 			$data['type_id'] = $_POST['type_id'];
 			$data['assigned_to'] = $_POST['assigned_to'];
 			
-			//die(print_r($data));
 			$incident = new Incident(0,$data);
 			try {
 				$incident->save();

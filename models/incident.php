@@ -6,7 +6,10 @@ class Incident extends Model {
 	public static $databaseUser = "ldenison";
 	
 	public function printDate($date) {
-		return date("m/d/Y",strtotime($date));
+		if(!empty($date)) {
+			return date("m/d/Y",strtotime($date));
+		}
+		else return "";
 		
 	}
 }
