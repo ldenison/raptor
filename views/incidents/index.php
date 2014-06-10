@@ -44,7 +44,7 @@ $incidents = $ic->index();
 					<i class="star glyphicon glyphicon-star"></i>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/view-incident"><?php echo $i->get("id");?></a>
+					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("id");?></a>
 				</td>
 				<td>
 					<a href="/raptor/views/incidents/?client_id=<?php echo $i->get("client_id");?>"><?php echo $client;?></a>
