@@ -10,7 +10,6 @@ class Incident extends Model {
 			return date("m/d/Y",strtotime($date));
 		}
 		else return "";
-		
 	}
 }
 ?>
