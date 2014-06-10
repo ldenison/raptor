@@ -1,5 +1,19 @@
 <?php 
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
+$incident = new Incident($_GET['id']);
+$id = $incident->get("id");
+$client = new Client($incident->get("client_id"));
+$client = $client->get("email");
+$assignee = $incident->get("assigned_to");
+$priority = new Priority($incident->get("priority_id"));
+$priority = $priority->get("priority");
+$status = new Status($incident->get("status_id"));
+$status = $status->get("status");
+$created = $incident->printDate($incident->get("created"));
+$due = $incident->printDate($incident->get("due"));
+$type = "Phone";
+$description = $incident->get("description");
+
 ?>
 
 <table class="table table-striped">
@@ -15,22 +29,20 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 			</div>
 		</td>
 	</tr>
-	<tr class="active"><th>#</th><th>Client</th><th>Asignee</th><th>P</th><th>Status</th><th>Created</th><th>Due</th><th>Type</th></tr>
+	<tr class="active"><th>#</th><th>Client</th><th>Assignee</th><th>P</th><th>Status</th><th>Created</th><th>Due</th><th>Type</th></tr>
 	<tr>
-		<td>4576</td>
-		<td><a href="#">bpeters</a></td>
-		<td><a href="#">ldenison</a></td>
-		<td>Urgent</td>
-		<td><i>Unresolved</i></td>
-		<td>06/06/2014</td>
-		<td>06/09/2014</td>
-		<td>Phone</td>
+		<td><?php echo $id;?></td>
+		<td><a href="#"><?php echo $client;?></a></td>
+		<td><a href="#"><?php echo $assignee?></a></td>
+		<td><?php echo $priority;?></td>
+		<td><i><?php echo $status?></i></td>
+		<td><?php echo $created;?></td>
+		<td><?php echo $due;?></td>
+		<td><?php echo $type;?></td>
 	</tr>
 	<tr><td colspan="8">
 		<h4>Description</h4>
-		I can't log in to my emich account because I there is something really 
-		long in this ticket for some reason but who cares found a dog and he is 
-		really cool
+		<?php echo $description;?>
 		</td>
 	</tr>
 </table>
