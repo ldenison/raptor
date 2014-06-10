@@ -2,7 +2,20 @@
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 
 $ic = new IncidentsController();
-$incidents = $ic->index();
+
+if(!empty($_GET['client_id'])) {
+	$clauses[] = Array("column"=>"client_id","value"=>$_GET['client_id'],"comparator"=>"=");
+	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
+}
+elseif(!empty($_GET['assigned_to'])) {
+	$clauses[] = Array("column"=>"assigned_to","value"=>"ldenison@emich.edu","comparator"=>"=");
+	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
+}
+else {
+	$clauses[] = Array("column"=>"assigned_to","value"=>"ldenison@emich.edu","comparator"=>"=");
+	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
+}
+$incidents = $ic->filter($clauses);
 ?>
 	<h3>My Incidents</h3>
 	<hr>
@@ -56,6 +69,7 @@ $incidents = $ic->index();
 					<a href="/raptor/views/incidents/?assigned_to=<?php echo $i->get("assigned_to");?>"><?php echo $i->get("assigned_to");?></a>
 				</td>
 				<td>
+					<p style="display:none;"><?php echo $priority->get("rank");?></p>
 					<?php echo $p_priority;?>
 				</td>
 				<td>
