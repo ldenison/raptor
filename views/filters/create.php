@@ -36,7 +36,7 @@ $(document).ready(function() {
 		var select =
 			$("<select>", {
 				class: "form-control",
-				html: "<option>=</option><option>!=</option>"
+				html: "<option>=</option><option>!=</option><option>LIKE</option>"
 			});
 		var input = 
 			$("<input>", {
