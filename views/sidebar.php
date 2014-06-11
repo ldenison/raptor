@@ -28,7 +28,7 @@
 				<li><a href="#">my.emich</a></li>
 				<li><a href="#">Email</a></li>
 			</ul>
-			<a href="#"><span class="btn btn-default btn-sm"><i>Create Filter</i></span></a>
+			<a href="/raptor/views/filters/create"><span class="btn btn-default btn-sm"><i>Create Filter</i></span></a>
 		</div>
 		<hr>
 		<p class="sidebar-header">

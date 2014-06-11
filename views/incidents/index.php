@@ -8,7 +8,7 @@ if(!empty($_GET['client_id'])) {
 	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
 }
 elseif(!empty($_GET['assigned_to'])) {
-	$clauses[] = Array("column"=>"assigned_to","value"=>"ldenison@emich.edu","comparator"=>"=");
+	$clauses[] = Array("column"=>"assigned_to","value"=>$_GET['assigned_to'],"comparator"=>"=");
 	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
 }
 else {
