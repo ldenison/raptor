@@ -16,7 +16,7 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 <div class="query-builder-ui form-inline">
 	<h3>Filter Builder</h3>
 	<hr>
-
+	<input type="text" class="form-control" placeholder="IQL Query"><br><br>
 </div>
 
 <script>
@@ -26,8 +26,8 @@ $(document).ready(function() {
 
 		var btn =
 			$("<span>", {
-				class: "btn btn-primary column-selected pull-left col-xs-3",
-				html: text
+				class: "btn btn-primary column-selected col-xs-3",
+				html: text + "<button type='button' class='close' aria-hidden='true'>&times;</button>"
 			});
 		var form_container = 
 			$("<div>", {
