@@ -25,7 +25,7 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 <script src="/raptor/views/js/stars.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/raptor/views/incidents">Raptor</a>
 		</div>

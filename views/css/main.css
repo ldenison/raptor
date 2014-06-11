@@ -19,5 +19,6 @@ th:hover {
 	color: white;
 }
 #main-content {
+	margin-top: 65px;
 	padding-left: 40px;
 }

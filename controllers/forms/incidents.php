@@ -37,6 +37,7 @@ if(isset($_GET['action'])) {
 				header("Location: ".$_SERVER['HTTP_REFERER']);
 				die();
 			}
+			break;
 		}
 	}
 }
