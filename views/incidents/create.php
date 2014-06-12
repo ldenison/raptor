@@ -23,6 +23,12 @@ $(document).ready(function() {
 			</div>
 		</div>
 		<div class="form-group">
+			<label class="control-label col-xs-2" for="team">Team</label>
+			<div class="col-xs-4">
+				<input class="form-control" type="text" name="team" id="team">
+			</div>
+		</div>
+		<div class="form-group">
 			<label class="control-label col-xs-2" for="priority">Priority</label>
 			<div class="col-xs-4">
 				<select class="form-control" name="priority_id" id="priority">

@@ -2,6 +2,7 @@
 require_once(getenv("DOCUMENT_ROOT")."/raptor/app/autoload.php");
 $ic = new IncidentsController();
 $cc = new ClientsController();
+$uc = new UsersController();
 
 if(isset($_GET['action'])) {
 	$action = $_GET['action'];
@@ -23,7 +24,11 @@ if(isset($_GET['action'])) {
 			$data['created'] = DB::oracleTime("now");
 			$data['due'] = DB::oracleTime("now + 3 days");
 			$data['type_id'] = $_POST['type_id'];
-			$data['assigned_to'] = $_POST['assigned_to'];
+			
+			$assignee = $uc->getBy("email",$_POST['assigned_to']);
+			if($assignee!=false) {
+				$data['assigned_to'] = $assignee[0]->get("id");
+			}
 			
 			$incident = new Incident(0,$data);
 			try {
