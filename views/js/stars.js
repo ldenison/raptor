@@ -1,18 +1,18 @@
 $(document).ready(function() {
 	$(".star").click(function() {
 		var incident_id = $(this).data("incident");
-		var flag = "";
+		var set = "";
 		if($(this).hasClass("glyphicon-star-empty")) {
 			$(this).removeClass("glyphicon-star-empty");
 			$(this).addClass("glyphicon-star");
-			action = "true";
+			set = "true";
 		}
 		else {
 			$(this).removeClass("glyphicon-star");
 			$(this).addClass("glyphicon-star-empty");
-			action = "false";
+			set = "false";
 		}
 		
-		$.get("/raptor/controllers/forms/incidents?action=star&id="+incident_id+"&set="+flag);
+		$.get("/raptor/controllers/forms/incidents?action=star&id="+incident_id+"&set="+set);
 	});
 });

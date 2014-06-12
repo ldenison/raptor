@@ -39,6 +39,21 @@ if(isset($_GET['action'])) {
 			}
 			break;
 		}
+		case "star": {
+			$data['incident_id'] = $_GET['id'];
+			$data['user_id'] = $_SESSION['raptor']['user_id'];
+			
+			$star = new Star(0,$data);
+			try {
+				$star->save();
+				die();
+			}
+			catch(Exception $e) {
+				echo "[success: false,error: 'database write error occurred']";
+				die();
+			}
+			break;
+		}
 	}
 }
 ?>
