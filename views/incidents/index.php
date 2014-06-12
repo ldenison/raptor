@@ -54,7 +54,7 @@ $incidents = $ic->filter($clauses);
 					</div>
 				</td>
 				<td>
-					<i class="star glyphicon glyphicon-star"></i>
+					<i class="star glyphicon glyphicon-star" data-incident="<?php echo $i->get("id");?>"></i>
 				</td>
 				<td>
 					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("id");?></a>
