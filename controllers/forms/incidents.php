@@ -1,5 +1,5 @@
 <?php 
-require_once(getenv("DOCUMENT_ROOT")."/raptor/app/autoload.php");
+require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/autoload.php");
 $ic = new IncidentsController();
 $cc = new ClientsController();
 $uc = new UsersController();

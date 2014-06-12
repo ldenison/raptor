@@ -2,7 +2,7 @@
 	session_start();
 }
 $_SESSION['raptor']['user_id']=1;
-require_once(getenv("DOCUMENT_ROOT")."/raptor/app/autoload.php");
+require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/autoload.php");
 /*
 if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['username'])) {
 	header("Location: /raptor/views/login");

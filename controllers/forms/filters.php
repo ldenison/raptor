@@ -1,5 +1,5 @@
 <?php 
-require_once(getenv("DOCUMENT_ROOT")."/raptor/app/autoload.php");
+require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/autoload.php");
 
 if(isset($_GET['action'])) {
 	$action = $_GET['action'];

@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
 	session_start();
 }
-require_once(getenv("DOCUMENT_ROOT")."/raptor/app/mvc/controller.php");
+require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/mvc/controller.php");
 
 class FiltersController extends Controller {
 	public static $table = "RAPTOR_FILTERS";

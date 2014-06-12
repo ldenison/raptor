@@ -1,5 +1,5 @@
 <?php 
-require_once(getenv("DOCUMENT_ROOT")."/raptor/app/mvc/model.php");
+require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/mvc/model.php");
 
 class Priority extends Model {
 	public static $table = "RAPTOR_PRIORITIES";

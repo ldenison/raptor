@@ -5,6 +5,30 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 <script>
 $(document).ready(function() {
 	$("#client").focus();
+
+	//Fill available teams for assignee
+	$("#assignee").change(function() {
+		$("#team").html('');
+		var email = $(this).val();
+		$.get("/raptor/controllers/forms/teams?action=json-get-user-teams&email="+email,
+			function(data) {
+				var i=0;
+				$.each(data,function(index,value) {
+					var id = data[i].id;
+					var name = data[i].name;
+
+					var option = 
+						$("<option>", {
+							value: id,
+							html:name
+						});
+					$("#team").append(option);
+					i++;
+				});
+			},
+			"json");
+	});
+	
 });
 </script>
 	<h3>Create Incident</h3>
@@ -25,7 +49,7 @@ $(document).ready(function() {
 		<div class="form-group">
 			<label class="control-label col-xs-2" for="team">Team</label>
 			<div class="col-xs-4">
-				<input class="form-control" type="text" name="team" id="team">
+				<select class="form-control" name="team" id="team"></select>
 			</div>
 		</div>
 		<div class="form-group">
