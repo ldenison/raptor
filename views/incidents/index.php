@@ -2,6 +2,7 @@
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 
 $ic = new IncidentsController();
+$sc = new StarsController();
 
 if(!empty($_GET['client_id'])) {
 	$clauses[] = Array("column"=>"client_id","value"=>$_GET['client_id'],"comparator"=>"=");
@@ -36,6 +37,15 @@ $incidents = $ic->filter($clauses);
 				
 				$status = new Status($i->get("status_id"));
 				$status = $status->get("status");
+				$star = $sc->hasStar($i->get("id"),$_SESSION['raptor']['user_id']);
+				if($star!=false) {
+					$star_class = "glyphicon-star";
+					$star_id = "data-star_id='".$star[0]->get("id")."'";
+				}
+				else {
+					$star_class = "glyphicon-star-empty";
+					$star_id = "";
+				}
 				?>
 			<tr>
 				<td>
@@ -54,7 +64,7 @@ $incidents = $ic->filter($clauses);
 					</div>
 				</td>
 				<td>
-					<i class="star glyphicon glyphicon-star" data-incident="<?php echo $i->get("id");?>"></i>
+					<i class="star glyphicon <?php echo $star_class;?>" <?php echo $star_id;?> data-incident="<?php echo $i->get("id");?>"></i>
 				</td>
 				<td>
 					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("id");?></a>
