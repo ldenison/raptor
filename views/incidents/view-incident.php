@@ -6,6 +6,8 @@ $client = new Client($incident->get("client_id"));
 $client = $client->get("email");
 $assignee = new User($incident->get("assigned_to"));
 $assignee = $assignee->get("email");
+$team = new Team($incident->get("team_id"));
+$team = $team->get("key");
 $priority = new Priority($incident->get("priority_id"));
 $priority = $priority->get("priority");
 $status = new Status($incident->get("status_id"));
@@ -19,7 +21,7 @@ $description = $incident->get("description");
 
 <table class="table table-striped">
 	<tr>
-		<td colspan="8">
+		<td colspan="9">
 			<div class="btn-group">
 				<a href="#close-incident" class="btn btn-default enable-tip" data-placement="bottom" title="Close [c]" data-toggle="modal"><i class="glyphicon glyphicon-remove"></i></a>
 				<a href="#assign-incident" class="btn btn-default enable-tip" data-placement="bottom" title="Reassign [r]" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i></a>
@@ -30,18 +32,19 @@ $description = $incident->get("description");
 			</div>
 		</td>
 	</tr>
-	<tr class="active"><th>#</th><th>Client</th><th>Assignee</th><th>P</th><th>Status</th><th>Created</th><th>Due</th><th>Type</th></tr>
+	<tr class="active"><th>#</th><th>Client</th><th>Assignee</th><th>Team</th><th>P</th><th>Status</th><th>Created</th><th>Due</th><th>Type</th></tr>
 	<tr>
 		<td><?php echo $id;?></td>
 		<td><a href="#"><?php echo $client;?></a></td>
 		<td><a href="#"><?php echo $assignee?></a></td>
+		<td><a href="#"><?php echo $team;?></a></td>
 		<td><?php echo $priority;?></td>
 		<td><i><?php echo $status?></i></td>
 		<td><?php echo $created;?></td>
 		<td><?php echo $due;?></td>
 		<td><?php echo $type;?></td>
 	</tr>
-	<tr><td colspan="8">
+	<tr><td colspan="9">
 		<h4>Description</h4>
 		<?php echo $description;?>
 		</td>

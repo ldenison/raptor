@@ -22,7 +22,7 @@ $incidents = $ic->filter($clauses);
 	<hr>
 	<table class="table table-condensed" id="incidents">
 		<thead>
-			<tr class="active"><td></td><td></td><th>#</th><th>Client</th><th>Summary</th><th>Assignee</th><th>P</th><th>Status</th><th>Created</th><th>Due</th></tr>
+			<tr class="active"><td></td><td></td><th>#</th><th>Client</th><th>Summary</th><th>Assignee</th><th>Team</th><th>P</th><th>Status</th><th>Created</th><th>Due</th></tr>
 		</thead>
 		<tbody>
 		<?php if(!empty($incidents)) { ?>
@@ -36,7 +36,9 @@ $incidents = $ic->filter($clauses);
 				}
 				else {
 					$assigned_to = "";
-				}	
+				}
+				$team = new Team($i->get("team_id"));
+				$team = $team->get("key");	
 				
 				$priority = new Priority($i->get("priority_id"));
 				$p_priority = "<i class='glyphicon ";
@@ -86,6 +88,7 @@ $incidents = $ic->filter($clauses);
 				<td>
 					<a href="/raptor/views/incidents/?assigned_to=<?php echo $i->get("assigned_to");?>"><?php echo $assigned_to;?></a>
 				</td>
+				<td><?php echo $team;?></td>
 				<td>
 					<p style="display:none;"><?php echo $priority->get("rank");?></p>
 					<?php echo $p_priority;?>
