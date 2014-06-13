@@ -55,9 +55,7 @@ $(document).ready(function() {
 					<?php 
 						if(!empty($teams)) {
 							foreach($teams as $t){?>
-							<option value="<?php echo $t->get("id");?>">
-								<?php echo $t->get("key");?>
-							</option>
+							<option value="<?php echo $t->get("id");?>"><?php echo $t->get("key");?></option>
 						<?php }
 						}?>
 				</select>
