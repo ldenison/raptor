@@ -11,19 +11,16 @@ if(isset($_GET['action'])) {
 			$email = $_GET['email'];
 			$users = $uc->getBy("email",$email);
 			if($users!=false) {
-				$id = $users[0]->get("id");
-				$teams = $tc->getBy("user_id",$id);
-				$json[] = Array("id"=>1,"name"=>"PSS");
-				$json[] = Array("id"=>2,"name"=>"Software Dev");
-				$json[] = Array("id"=>91,"name"=>"NETENG");
-				if($teams!=false) {
-					foreach($teams as $t) {
-						$json['id'] = $t->get("id");
-						$json['name'] = $t->get("name");
-					}
+				$user = $users[0];
+				$teams = $user->get("teams");
+				foreach($teams as $t) {
+					$json[] = Array("id"=>$t->get("id"),"name"=>$t->get("key"));
+				}
+				
+				if(isset($json)) {
 					echo json_encode($json);
 				}
-				else echo json_encode($json);
+				else echo "[]";
 			}
 			else {
 				echo "[success: false,message: 'email address not found']";

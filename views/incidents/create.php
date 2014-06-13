@@ -5,7 +5,7 @@ require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
 <script>
 $(document).ready(function() {
 	$("#client").focus();
-
+	
 	//Fill available teams for assignee
 	$("#assignee").change(function() {
 		$("#team").html('');
