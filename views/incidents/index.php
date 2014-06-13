@@ -112,7 +112,10 @@ $incidents = $ic->filter($clauses);
 			<?php }?>
 			
 			<?php } else {?>
-			There are no Incidents
+			<tr><td>
+				<strong>There are no Incidents</strong>
+				</td>
+			</tr>
 			<?php }?>
 		</tbody>
 	</table>

@@ -74,7 +74,7 @@ if(isset($_GET['action'])) {
 			$incident->set("status_id",2);
 			try {
 				$incident->save();
-				header("Location: ".$_SERVER['HTTP_REFERER']);
+				header("Location: /raptor/views/incidents");
 				die();
 			}
 			catch(Exception $e) {
