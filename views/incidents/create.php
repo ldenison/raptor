@@ -1,5 +1,7 @@
 <?php 
 require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
+$user = new User($_SESSION['raptor']['user_id']);
+$teams = $user->get("teams");
 ?>
 
 <script>
@@ -43,13 +45,22 @@ $(document).ready(function() {
 		<div class="form-group">
 			<label class="control-label col-xs-2" for="assignee">Assignee</label>
 			<div class="col-xs-4">
-				<input class="form-control" type="text" name="assigned_to" id="assignee" value="ldenison@emich.edu">
+				<input class="form-control" type="text" name="assigned_to" id="assignee" value=<?php echo $_SESSION['raptor']['email'];?>>
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="control-label col-xs-2" for="team">Team</label>
 			<div class="col-xs-4">
-				<select class="form-control" name="team" id="team"></select>
+				<select class="form-control" name="team_id" id="team">
+					<?php 
+						if(!empty($teams)) {
+							foreach($teams as $t){?>
+							<option value="<?php echo $t->get("id");?>">
+								<?php echo $t->get("key");?>
+							</option>
+						<?php }
+						}?>
+				</select>
 			</div>
 		</div>
 		<div class="form-group">

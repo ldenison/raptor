@@ -13,7 +13,7 @@ elseif(!empty($_GET['assigned_to'])) {
 	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
 }
 else {
-	$clauses[] = Array("column"=>"assigned_to","value"=>"ldenison@emich.edu","comparator"=>"=");
+	$clauses[] = Array("column"=>"assigned_to","value"=>$_SESSION['raptor']['user_id'],"comparator"=>"=");
 	$clauses[] = Array("column"=>"status_id","value"=>1,"comparator"=>"=","prepend"=>"AND");
 }
 $incidents = $ic->filter($clauses);
@@ -29,6 +29,14 @@ $incidents = $ic->filter($clauses);
 			<?php foreach($incidents as $i){
 				$client = new Client($i->get("client_id"));
 				$client = $client->get("email");
+				
+				$assigned_to = new User($i->get("assigned_to"));
+				if($assigned_to!=false) {
+					$assigned_to = $assigned_to->get("email");
+				}
+				else {
+					$assigned_to = "";
+				}	
 				
 				$priority = new Priority($i->get("priority_id"));
 				$p_priority = "<i class='glyphicon ";
@@ -76,7 +84,7 @@ $incidents = $ic->filter($clauses);
 					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("description");?></a>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/?assigned_to=<?php echo $i->get("assigned_to");?>"><?php echo $i->get("assigned_to");?></a>
+					<a href="/raptor/views/incidents/?assigned_to=<?php echo $i->get("assigned_to");?>"><?php echo $assigned_to;?></a>
 				</td>
 				<td>
 					<p style="display:none;"><?php echo $priority->get("rank");?></p>

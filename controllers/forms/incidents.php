@@ -24,6 +24,7 @@ if(isset($_GET['action'])) {
 			$data['created'] = DB::oracleTime("now");
 			$data['due'] = DB::oracleTime("now + 3 days");
 			$data['type_id'] = $_POST['type_id'];
+			$data['team_id'] = $_POST['team_id'];
 			
 			$assignee = $uc->getBy("email",$_POST['assigned_to']);
 			if($assignee!=false) {

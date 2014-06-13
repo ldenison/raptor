@@ -2,6 +2,7 @@
 	session_start();
 }
 $_SESSION['raptor']['user_id']=1;
+$_SESSION['raptor']['email'] = "ldenison@emich.edu";
 require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/autoload.php");
 /*
 if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['username'])) {
