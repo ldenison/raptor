@@ -23,7 +23,12 @@ $description = $incident->get("description");
 	<tr>
 		<td colspan="9">
 			<div class="btn-group">
-				<a href="#close-incident" class="btn btn-default enable-tip" data-placement="bottom" title="Close [c]" data-toggle="modal"><i class="glyphicon glyphicon-remove"></i></a>
+				<a href="#close-incident" data-incident="<?php echo $incident->get("id");?>"
+					data-input="#close_incident_id"
+					class="btn btn-default enable-tip incident-modal-trigger" data-placement="bottom" 
+					title="Close [c]" data-toggle="modal">
+					<i class="glyphicon glyphicon-remove"></i>
+				</a>
 				<a href="#assign-incident" class="btn btn-default enable-tip" data-placement="bottom" title="Reassign [r]" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i></a>
 				<a href="#email-incident" class="btn btn-default enable-tip" data-placement="bottom" title="Email Client [e]" data-toggle="modal"><i class="glyphicon glyphicon-envelope"></i></a>
 				<a href="#comment-incident" class="btn btn-default enable-tip" data-placement="bottom" title="Comment [t]" data-toggle="modal"><i class="glyphicon glyphicon-comment"></i></a>
@@ -50,7 +55,7 @@ $description = $incident->get("description");
 		</td>
 	</tr>
 </table>
-
+<script src="/raptor/views/js/incident-modals.js"></script>
 <script>
 $(document).ready(function() {
 	$(".enable-tip").tooltip({container:'body'});

@@ -65,8 +65,23 @@ if(isset($_GET['action'])) {
 				$star = new Star($_GET['id']);
 				$star->delete();
 			}
-			
-			
+			break;
+		}
+		case "close": {
+			$incident = new Incident($_POST["id"]);
+			$incident->set("close_time",DB::oracleTime("now"));
+			$incident->set("close_comment",$_POST['close_comment']);
+			$incident->set("status_id",2);
+			try {
+				$incident->save();
+				header("Location: ".$_SERVER['HTTP_REFERER']);
+				die();
+			}
+			catch(Exception $e) {
+				$_SESSION['raptor']['error'] = "Error closing incident";
+				header("Location: ".$_SERVER['HTTP_REFERER']);
+				die();
+			}
 			break;
 		}
 	}

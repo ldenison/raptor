@@ -12,17 +12,17 @@
 				<h3>Close Incident</h3>
 				<form role='form' name='close_incident'
 					id="close_incident"
-					action='/raptor/controllers/incidentsController?action=close'
+					action='/raptor/controllers/forms/incidents?action=close'
 					method='post'>
-					<input type="hidden" id="close_incident_id" name="id" value="4576">
+					<input type="hidden" id="close_incident_id" name="id">
 					<div class='form-group'>
-						<textarea class="form-control" name="comment" rows="5" placeholder="Comment..."></textarea>
+						<textarea class="form-control" name="close_comment" rows="5" placeholder="Comment..."></textarea>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<input type="submit" form='custom_incident' class="btn btn-primary"
+				<input type="submit" form='close_incident' class="btn btn-primary"
 					value='Close Incident'>
 			</div>
 		</div>
