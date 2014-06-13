@@ -64,7 +64,13 @@ $incidents = $ic->filter($clauses);
 							<i class="glyphicon glyphicon-cog"></i>
 						</span>
 						<ul class="dropdown-menu dropdown-menu-left">
-							<li><a href="#close-incident" data-toggle="modal"><i class="glyphicon glyphicon-remove"></i> Close</a></li>
+							<li><a href="#close-incident" data-incident="<?php echo $i->get("id");?>"
+								data-input="#close_incident_id"
+								class="incident-modal-trigger" 
+								data-toggle="modal">
+									<i class="glyphicon glyphicon-remove"></i> Close
+								</a>
+							</li>
 							<li><a href="#assign-incident" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i> Assign</a></li>
 							<li><a href="#email-incident" data-toggle="modal"><i class="glyphicon glyphicon-envelope"></i> Email</a></li>
 							<li><a href="#comment-incident" data-toggle="modal"><i class="glyphicon glyphicon-comment"></i> Comment</a></li>
@@ -111,6 +117,7 @@ $incidents = $ic->filter($clauses);
 		</tbody>
 	</table>
 
+<script src="/raptor/views/js/incident-modals.js"></script>
 <script src="/common/jquery-tablesorter/jquery.tablesorter.min.js"></script>
 <script>
 $(document).ready(function() {
