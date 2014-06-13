@@ -10,8 +10,8 @@ if(isset($_GET['action'])) {
 	switch($action) {
 		case "create": {
 			$clients = $cc->getBy("email",($_POST['client']));
-			if(sizeof($clients)!=1) {
-				$_SESSION['raptor']['error'] = "System Error: Multiple client matches found. Contact your system administrator.";
+			if($clients==false) {
+				$_SESSION['raptor']['error'] = "Client Not found.";
 				header("Location: ".$_SERVER['HTTP_REFERER']);
 				die();
 			}

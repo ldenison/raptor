@@ -7,7 +7,6 @@ $teams = $user->get("teams");
 <script>
 $(document).ready(function() {
 	$("#client").focus();
-	
 	//Fill available teams for assignee
 	$("#assignee").change(function() {
 		$("#team").html('');
@@ -100,9 +99,14 @@ $(document).ready(function() {
 			</div>
 		</div>
 		<div class="form-group">
-		<div class="col-sm-6">
-			<input type="submit" class="btn btn-success btn-block btn-lg" value="Create Incident">
+			<div class="col-xs-6">
+				<textarea class="form-control" rows="10" name="close_comment" placeholder="Resolution..."></textarea>
+			</div>
 		</div>
-	</div>
+		<div class="form-group">
+			<div class="col-sm-6">
+				<input type="submit" class="btn btn-success btn-block btn-lg" value="Create Incident">
+			</div>
+		</div>
 	
 	</form>
