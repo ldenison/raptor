@@ -21,7 +21,7 @@
 		</p>
 		<div class="submenu expand">
 			<ul>
-				<li><a href="#">Mine</a></li>
+				<li><a href="/raptor/views/incidents">Mine</a></li>
 				<li><a href="#">Starred</a></li>
 				<li><a href="#">PSS Team</a></li>
 				<li><a href="#">EAS Team</a></li>
