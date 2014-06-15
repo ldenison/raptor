@@ -17,6 +17,9 @@
 					<div class='form-group'>
 						<textarea class="form-control" name="email" rows="5" placeholder="Body..."></textarea>
 					</div>
+					<div class="form-group">
+						<span class="btn btn-default btn-sm">Include Signature</span>
+					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
