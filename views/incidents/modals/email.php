@@ -1,3 +1,14 @@
+<script>
+
+$(document).ready(function() {
+	var signature = "=================\nLuke Denison\nWeb Developer / Analyst\nEastern Michigan University";
+	$("#include-email-signature").click(function() {
+		var text = $("#email-body").text();
+		$("#email-body").text(text + signature);
+	});
+});
+</script>
+
 <!-- Email Incident Modal -->
 <div class="modal fade" id="email-incident" tabindex="-1" role="dialog"
 	aria-labelledby="email-incident-Label" aria-hidden="true">
@@ -15,10 +26,10 @@
 					method='post'>
 					<input type="hidden" id="email_incident_id" name="id" value="4576">
 					<div class='form-group'>
-						<textarea class="form-control" name="email" rows="5" placeholder="Body..."></textarea>
+						<textarea class="form-control" name="body" id="email-body" rows="5" placeholder="Body..."></textarea>
 					</div>
 					<div class="form-group">
-						<span class="btn btn-default btn-sm">Include Signature</span>
+						<span class="btn btn-default btn-sm" id="include-email-signature">Include Signature</span>
 					</div>
 				</form>
 			</div>
