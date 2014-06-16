@@ -30,13 +30,17 @@ $(document).ready(function() {
 	
 	//Hot keys (left bracket or right - []) to expand / collapse sidebar
 	$(document).keyup(function(e) {
-		if(e.keyCode == 219) {
-			collapseSidebar();
+		if($("textarea,input,select").is(":focus")==false) {
+			if(e.keyCode == 219) {
+				collapseSidebar();
+			}
 		}
 	});
 	$(document).keyup(function(e) {
-		if(e.keyCode == 221) {
-			expandSidebar();
+		if($("textarea,input,select").is(":focus")==false) {
+			if(e.keyCode == 221) {
+				expandSidebar();
+			}
 		}
 	});
 });

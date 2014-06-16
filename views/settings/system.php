@@ -21,5 +21,8 @@
 		<label for="imap-password">IMAP Password</label>
 		<input type="password" class="form-control" name="imap-password" id="imap-password">
 	</div>
-
+	<div class="form-group">
+		<label for="imap-host">IMAP Host</label>
+		<input type="text" class="form-control" name="imap-host" id="imap-host">
+	</div>
 </form>

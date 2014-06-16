@@ -60,34 +60,37 @@ $description = $incident->get("description");
 $(document).ready(function() {
 	$(".enable-tip").tooltip({container:'body'});
 
-	/*
+	
 	$(document).keyup(function(e) {
-		//Hotkey [c]
-		if(e.keyCode == 67) {
-			$("#close-incident").modal("show");
-		}
-		//Hotkey [r]
-		else if(e.keyCode == 82) {
-			$("#assign-incident").modal("show");
-		}
-		//Hotkey [e]
-		else if(e.keyCode == 69) {
-			$("#email-incident").modal("show");
-		}
-		//Hotkey [t]
-		else if(e.keyCode == 84) {
-			$("#comment-incident").modal("show");
-		}
-		//Hotkey [a]
-		else if(e.keyCode == 65) {
-			$("#attach-incident").modal("show");
-		}
-		//Hotkey [d]
-		else if(e.keyCode == 68) {
-			$("#due-date-incident").modal("show");
+		//Make sure focus is not in an element that a user is typing in
+		if($("textarea,input,select").is(":focus")==false) {
+			//Hotkey [c]
+			if(e.keyCode == 67) {
+				$("#close-incident").modal("show");
+			}
+			//Hotkey [r]
+			else if(e.keyCode == 82) {
+				$("#assign-incident").modal("show");
+			}
+			//Hotkey [e]
+			else if(e.keyCode == 69) {
+				$("#email-incident").modal("show");
+			}
+			//Hotkey [t]
+			else if(e.keyCode == 84) {
+				$("#comment-incident").modal("show");
+			}
+			//Hotkey [a]
+			else if(e.keyCode == 65) {
+				$("#attach-incident").modal("show");
+			}
+			//Hotkey [d]
+			else if(e.keyCode == 68) {
+				$("#due-date-incident").modal("show");
+			}
 		}
 	});
-	*/
+	
 });
 </script>
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/assign.php");?>
