@@ -23,6 +23,20 @@
 	</div>
 	<div class="form-group">
 		<label for="imap-host">IMAP Host</label>
-		<input type="text" class="form-control" name="imap-host" id="imap-host">
+    <input type="text" class="form-control" name="imap-host" id="imap-host">
 	</div>
+ <hr>
+ <h3>System Settings</h3>
+ <div class="form-group">
+   <label for="database-host">Host</label>
+   <input type="text" name="database-host" id="database-host">
+ </div>
+ <div class="form-group">
+   <label for="database-username">Username</label>
+   <input type="text" name="database-username" id="database-username">
+ </div>
+ <div class="form-group">
+   <label for="database-password">Password</label>
+   <input type="password" name="database-password" id="database-password">
+ </div>
 </form>
