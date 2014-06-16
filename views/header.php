@@ -44,6 +44,7 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="/raptor/views/settings"><i class="glyphicon glyphicon-cog"></i></a>
 					<ul class="dropdown-menu" role="menu">
+						<li><a href="/raptor/views/settings/system">System</a></li>
 						<li><a href="/raptor/views/settings/priority">Priorities</a></li>
 						<li><a href="/raptor/views/settings/status">Statuses</a></li>
 						<li><a href="/raptor/views/settings/team">Teams</a></li>
