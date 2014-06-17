@@ -29,14 +29,14 @@
  <h3>System Settings</h3>
  <div class="form-group">
    <label for="database-host">Host</label>
-   <input type="text" name="database-host" id="database-host">
+   <input type="text" class="form-control" name="database-host" id="database-host">
  </div>
  <div class="form-group">
    <label for="database-username">Username</label>
-   <input type="text" name="database-username" id="database-username">
+   <input type="text" class="form-control" name="database-username" id="database-username">
  </div>
  <div class="form-group">
    <label for="database-password">Password</label>
-   <input type="password" name="database-password" id="database-password">
+   <input type="password" class="form-control" name="database-password" id="database-password">
  </div>
 </form>
