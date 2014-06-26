@@ -4,4 +4,7 @@ $(document).ready(function() {
 		var input = $(this).data("input");
 		$(input).val(id);
 	});
+	$(".attach-modal-trigger").click(function() {
+		$("#attach-file-incident").click();
+	});
 });

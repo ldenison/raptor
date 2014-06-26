@@ -1,0 +1,1 @@
+<input type="file" style="display:none;" name="attach-file-incident" id="attach-file-incident">

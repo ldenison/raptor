@@ -74,7 +74,7 @@ $incidents = $ic->filter($clauses);
 							<li><a href="#assign-incident" data-toggle="modal"><i class="glyphicon glyphicon-share-alt"></i> Assign</a></li>
 							<li><a href="#email-incident" data-toggle="modal"><i class="glyphicon glyphicon-envelope"></i> Email</a></li>
 							<li><a href="#comment-incident" data-toggle="modal"><i class="glyphicon glyphicon-comment"></i> Comment</a></li>
-							<li><a href="#attach-incident" data-toggle="modal"><i class="glyphicon glyphicon-paperclip"></i> Attach</a></li>
+							<li><a href="#attach-incident" class="attach-modal-trigger" data-toggle="modal"><i class="glyphicon glyphicon-paperclip"></i> Attach</a></li>
 							<li><a href="#due-date-incident" data-toggle="modal"><i class="glyphicon glyphicon-calendar"></i> Change Due Date</a></li>
 						</ul>
 					</div>
