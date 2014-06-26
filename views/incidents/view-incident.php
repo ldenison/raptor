@@ -55,6 +55,72 @@ $description = $incident->get("description");
 		</td>
 	</tr>
 </table>
+<ul class="nav nav-pills" role="tablist">
+  <li class="active"><a href="#comments" role="tab" data-toggle="tab">Comments</a></li>
+  <li><a href="#workflow" role="tab" data-toggle="tab">Workflow</a></li>
+  <li><a href="#all" role="tab" data-toggle="tab">All</a></li>
+</ul>
+<br>
+<div class="tab-content">
+  <div class="tab-pane active" id="comments">
+  	<table class="table table-striped">
+  		<tr><td>7/10/2014 - 12:52pm <strong>ldenison@emich.edu</strong><br>
+  				This entire piece of software is pretty bad all around.
+  			</td>
+  		</tr>
+  		<tr><td>7/10/2014 - 02:35pm <strong>optimist@emich.edu</strong><br>
+  				But hopefully it gets better with age.
+  			</td>
+  		</tr>
+  		<tr><td>7/10/2014 - 04:04pm <strong>pessimist@emich.edu</strong><br>
+  				I find that kind of unlikely.
+  			</td>
+  		</tr>
+  	</table>
+  </div>
+  <div class="tab-pane" id="workflow">
+	  <table class="table table-striped">
+	  		<tr><td>7/09/2014 - 01:05pm <strong>ldenison@emich.edu</strong><br>
+	  				 Reassigned from <strong>pessimist@emich.edu</strong> to
+	  				<strong>optimist@emich.edu</strong>
+	  			</td>
+	  		</tr>
+	  		<tr><td>7/11/2014 - 10:06pm <strong>ldenison@emich.edu</strong><br>
+	  				 Changed status from <strong>Unresolved</strong> to 
+	  				 <strong>Resolved</strong>
+	  			</td>
+	  		</tr>
+	  	</table>
+  	</div>
+  <div class="tab-pane" id="all">
+  	<table class="table table-striped">
+  		<tr><td>7/09/2014 - 01:05pm <strong>ldenison@emich.edu</strong><br>
+  				 Reassigned from <strong>pessimist@emich.edu</strong> to
+  				<strong>optimist@emich.edu</strong>
+  			</td>
+	  	</tr>
+  		<tr><td>7/10/2014 - 12:52pm <strong>ldenison@emich.edu</strong><br>
+  				This entire piece of software is pretty bad all around.
+  			</td>
+  		</tr>
+  		<tr><td>7/10/2014 - 02:35pm <strong>optimist@emich.edu</strong><br>
+  				But hopefully it gets better with age.
+  			</td>
+  		</tr>
+  		<tr><td>7/10/2014 - 04:04pm <strong>pessimist@emich.edu</strong><br>
+  				I find that kind of unlikely.
+  			</td>
+  		</tr>
+  		<tr><td>7/11/2014 - 10:06pm <strong>ldenison@emich.edu</strong><br>
+  				 Changed status from <strong>Unresolved</strong> to 
+  				 <strong>Resolved</strong>
+  			</td>
+  		</tr>
+  	</table>
+  </div>
+</div>
+
+
 <script src="/raptor/views/js/incident-modals.js"></script>
 <script>
 $(document).ready(function() {
