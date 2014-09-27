@@ -34,7 +34,7 @@ $(document).ready(function() {
 </script>
 	<h3>Create Incident</h3>
 	<hr>
-	<form class="form-horizontal" name="create_incident" action="/raptor/controllers/forms/incidents?action=create" method="post">
+	<form class="form-horizontal" name="create_incident" action="/raptor/api/forms/incidents?action=create" method="post">
 		<div class="form-group">
 			<label class="control-label col-xs-2" for="client">Client Email</label>
 			<div class="col-xs-4">

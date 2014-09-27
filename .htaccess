@@ -1,0 +1,2 @@
+php_value set_include_path "/home/apache2/htdocs/raptor"
+php_value auto_prepend_file "src/lib/autoload.php"

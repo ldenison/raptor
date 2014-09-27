@@ -162,6 +162,6 @@ $(document).ready(function() {
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/assign.php");?>
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/attach.php");?>
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/close.php");?>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/comment.php");?>
+<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/Comment.php");?>
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/due-date.php");?>
 <?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/email.php");?>

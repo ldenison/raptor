@@ -4,11 +4,11 @@ if(!isset($_SESSION)){
 }
 require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/mvc/controller.php");
 
-class FiltersController extends Controller {
-	public static $table = "RAPTOR_FILTERS";
-	public static $model = "Filter";
+class PrioritiesController extends Controller {
+	public static $table = "RAPTOR_PRIORITIES";
+	public static $model = "Priority";
 	public static $databaseUser = "ldenison";
-	public static $modelPath = "/raptor/models/filter.php";
+	public static $modelPath = "/raptor/models/Priority.php";
 	public static $application_name = "raptor";
 	
 }

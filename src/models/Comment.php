@@ -10,13 +10,13 @@ class Comment extends Model {
 			array(
 				'className' => 'Incident',
 				'joinTable' => 'RAPTOR_INCIDENTS',
-				'foreign_key' => 'INCIDENT_ID',
+				'foreignKey' => 'INCIDENT_ID',
 		),
 		"user" =>
 			array(
 				'className' => 'User',
 				'joinTable' => 'RAPTOR_USERS',
-				'foreign_key' => 'USER_ID'
+				'foreignKey' => 'USER_ID'
 		)
 	);
 }

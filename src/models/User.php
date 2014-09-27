@@ -10,8 +10,8 @@ class User extends Model {
 			array(
 				'className' => 'Team',
 				'joinTable' => 'RAPTOR_TEAMS_USERS',
-				'foreign_key' => 'USER_ID',
-				'association_key' => 'TEAM_ID'
+				'foreignKey' => 'USER_ID',
+				'associationKey' => 'TEAM_ID'
 			)
 	);
 }

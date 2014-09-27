@@ -8,7 +8,7 @@ class StarsController extends Controller {
 	public static $table = "RAPTOR_STARS";
 	public static $model = "Star";
 	public static $databaseUser = "ldenison";
-	public static $modelPath = "/raptor/models/star.php";
+	public static $modelPath = "/raptor/models/Star.php";
 	public static $application_name = "raptor";
 	
 	
