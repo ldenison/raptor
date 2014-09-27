@@ -3,13 +3,7 @@
 }
 $_SESSION['raptor']['user_id']=1;
 $_SESSION['raptor']['email'] = "ldenison@emich.edu";
-require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/autoload.php");
-/*
-if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['username'])) {
-	header("Location: /raptor/views/login");
-	die();
-}
-*/
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,13 +12,13 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/common/img/favicon.png">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="/raptor/views/css/header.css">
-<link rel="stylesheet" href="/raptor/views/css/sidebar.css">
-<link rel="stylesheet" href="/raptor/views/css/main.css">
+<link rel="stylesheet" href="/raptor/css/header.css">
+<link rel="stylesheet" href="/raptor/css/sidebar.css">
+<link rel="stylesheet" href="/raptor/css/main.css">
 <script type='text/javascript' src='/common/javascript/jquery-1.9.1.min.js'></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="/raptor/views/js/sidebar.js"></script>
-<script src="/raptor/views/js/stars.js"></script>
+<script src="/raptor/js/sidebar.js"></script>
+<script src="/raptor/js/stars.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -40,18 +34,18 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 
 		<div class='navbar-right pull-right'>
 			<ul class='nav navbar-nav'>
-				<li><a href="/raptor/views/users/profile"><i class="glyphicon glyphicon-user"></i></a></li>
+				<li><a href="/raptor/users/profile"><i class="glyphicon glyphicon-user"></i></a></li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="/raptor/views/settings"><i class="glyphicon glyphicon-cog"></i></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="/raptor/settings"><i class="glyphicon glyphicon-cog"></i></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="/raptor/views/settings/system">System</a></li>
-						<li><a href="/raptor/views/settings/priority">Priorities</a></li>
-						<li><a href="/raptor/views/settings/status">Statuses</a></li>
-						<li><a href="/raptor/views/settings/team">Teams</a></li>
-						<li><a href="/raptor/views/settings/user">Users</a></li>
+						<li><a href="/raptor/settings/system">System</a></li>
+						<li><a href="/raptor/settings/priority">Priorities</a></li>
+						<li><a href="/raptor/settings/status">Statuses</a></li>
+						<li><a href="/raptor/settings/team">Teams</a></li>
+						<li><a href="/raptor/settings/user">Users</a></li>
 					</ul>
 				</li>
-				<li><a href='/raptor/views/logout'>Log out</a></li>
+				<li><a href='/raptor/logout'>Log out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -68,7 +62,7 @@ if(basename($_SERVER['PHP_SELF'])!='login.php' && !isset($_SESSION['raptor']['us
 			}
 		?>
 
-		<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/sidebar.php");?>
+		<?php require_once("sidebar.php");?>
 		<div id="main-content" class="<?php echo $content_width;?>">
 			<?php if(isset($_SESSION['raptor']['message'])){?>
 

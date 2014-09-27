@@ -1,3 +1,1 @@
-<?php 
-header("Location: ./views");
-?>
+<?php require_once("header.php");?>
