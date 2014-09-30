@@ -1,5 +1,5 @@
 <?php
-class Database extends PDO{
+class DB extends PDO{
     private $engine;
     private $host;
     private $database;
@@ -7,12 +7,12 @@ class Database extends PDO{
     private $pass;
 
     public function __construct() {
-        $this->engine = "mysql";
-        $this->host = "MemoryRSS.db.9498559.hostedresource.com";
-        $this->user = "MemoryRSS";
-        $this->database = "MemoryRSS";
-        $this->pass = "nqi!%xcuYHL89layu";
-        $dns = $this->engine.":dbname=".$this->database.";host=".$this->host;
+        $this->engine = "oci";
+        $this->host = "apptestdb.emich.edu";
+        $this->user = "ldenison";
+        $this->database = "APPTEST";
+        $this->pass = "h4v3c0k3wb0rt";
+        $dns = "oci:dbname=(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = apptestdb.emich.edu)(PORT = 1521)))(CONNECT_DATA=(SID=APPTEST)))";
         parent::__construct($dns,$this->user,$this->pass);
     }
 }

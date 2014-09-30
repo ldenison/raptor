@@ -1,8 +1,4 @@
 <?php
-require_once(getenv("DOCUMENT_ROOT")."/Database/database.php");
-require_once(getenv("DOCUMENT_ROOT")."/moveit2/lib/autoload.php");
-require_once('model.php');
-
 class Controller {
     public $db;
 
@@ -13,7 +9,7 @@ class Controller {
     public static $databaseUser = "WEB_MOVEIT";
 
     function __construct() {
-        $this->db = DB::connect(static::$databaseUser);
+        $this->db = new DB();
     }
 
     function index($orderBy="id ASC") {

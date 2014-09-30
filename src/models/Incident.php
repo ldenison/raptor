@@ -1,6 +1,4 @@
-<?php 
-require_once(getenv("DOCUMENT_ROOT")."/raptor/lib/mvc/model.php");
-
+<?php
 class Incident extends Model {
 	public static $table = "RAPTOR_INCIDENTS";
 	
@@ -11,4 +9,3 @@ class Incident extends Model {
 		else return "";
 	}
 }
-?>

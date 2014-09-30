@@ -1,5 +1,5 @@
 <?php 
-require_once(getenv("DOCUMENT_ROOT")."/raptor/views/header.php");
+require_once("header.php");
 
 $ic = new IncidentsController();
 $sc = new StarsController();
@@ -83,16 +83,16 @@ $incidents = $ic->filter($clauses);
 					<i class="star glyphicon <?php echo $star_class;?>" <?php echo $star_id;?> data-incident="<?php echo $i->get("id");?>"></i>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("id");?></a>
+					<a href="/raptor/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("id");?></a>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/?client_id=<?php echo $i->get("client_id");?>"><?php echo $client;?></a>
+					<a href="/raptor/incidents/?client_id=<?php echo $i->get("client_id");?>"><?php echo $client;?></a>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("description");?></a>
+					<a href="/raptor/incidents/view-incident?id=<?php echo $i->get("id");?>"><?php echo $i->get("description");?></a>
 				</td>
 				<td>
-					<a href="/raptor/views/incidents/?assigned_to=<?php echo $i->get("assigned_to");?>"><?php echo $assigned_to;?></a>
+					<a href="/raptor/incidents/?assigned_to=<?php echo $i->get("assigned_to");?>"><?php echo $assigned_to;?></a>
 				</td>
 				<td><?php echo $team;?></td>
 				<td>
@@ -127,9 +127,9 @@ $(document).ready(function() {
 	$("#incidents").tablesorter();
 });
 </script>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/assign.php");?>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/attach.php");?>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/close.php");?>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/Comment.php");?>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/due-date.php");?>
-<?php require_once(getenv("DOCUMENT_ROOT")."/raptor/views/incidents/modals/email.php");?>
+<?php require_once("incidents/modals/assign.php");?>
+<?php require_once("incidents/modals/attach.php");?>
+<?php require_once("incidents/modals/close.php");?>
+<?php require_once("incidents/modals/comment.php");?>
+<?php require_once("incidents/modals/due-date.php");?>
+<?php require_once("incidents/modals/email.php");?>

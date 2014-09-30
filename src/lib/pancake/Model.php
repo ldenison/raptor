@@ -1,7 +1,4 @@
 <?php
-require_once("/home/apache2/htdocs/Database/database.php");
-require_once("/home/apache2/htdocs/moveit2/lib/autoload.php");
-
 class Model {
     public $db;
 
@@ -26,7 +23,7 @@ class Model {
      */
     function __construct($id,$data=null) {
         $this->valid = true;
-        $this->db = DB::connect(static::$databaseUser);
+        $this->db = new DB();
 
         if($id==0) {
             $this->describeColumnsFromDB();
